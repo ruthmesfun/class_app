@@ -1,0 +1,12 @@
+<h1>Welcome, <%=@student.first_name%>!</h1>
+<br>
+<img src='<%=@student.image%>'>
+<br>
+<a href = "http://<%=@student.github%>"><p>Github link</p> </a>
+
+<p>Number of Questions Asked:</p>
+<%= @student.num_of_questions%>
+
+<p>Number of Questions Answered:</p>
+<%= @student.num_of_answers%>
+<%#need to add the number of questions asked, the number of answeres, and the list of questions and numbers%>
