@@ -1,14 +1,14 @@
 PLEASE EDIT YOUR PROFILE HERE
 <form method="POST" action="/profile">
-    <input id= "hidden" type= "hidden" name="_method" value = "patch">
+    <input id="hidden" type="hidden" name="_method" value="patch">
     <label>First Name</label>
-    <input type= "text" name= "first_name" value = "<%@student.first_name%>">
+    <input type= "text" name= "first_name" value = "<%=@student.first_name%>">
     <br>
     <label>Profile Picture (link of image)</label>
-    <input type= "text" name= "image" value = "<%@student.image%>">
+    <input type= "text" name= "image" value = "<%=@student.image%>">
     <br>
     <label>Github Profile</label>
-    <input type= "text" name= "github" value = "<%@student.github%>">
+    <input type= "text" name= "github" value = "<%=@student.github%>">
     <br>
     <input type= "submit" value = "Submit">   
 </form>
