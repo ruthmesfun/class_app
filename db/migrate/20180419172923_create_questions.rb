@@ -12,4 +12,3 @@ class CreateQuestions < ActiveRecord::Migration[5.2]
   end
 end
 
-#make sure to add the tag
