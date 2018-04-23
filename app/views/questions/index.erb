@@ -1,0 +1,9 @@
+
+<ul>
+<%@questions.each do |question|%>
+    <li><%=question.title%></li>
+    <%if !question.student.nil?%>
+        <li><%=question.student.username%></li>
+    <%end%>
+<%end%>
+</ul>

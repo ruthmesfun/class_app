@@ -18,6 +18,19 @@
     - list of q
     - list of a
 [X] Create a logout page
-5. Create an edit page <NEED HELP WITH THIS>
+[X] Create an edit page
 
 ## TASK LIST - Question
+1. Create a question form 
+    - Make sure the student is logged in
+    - Validates all information is present
+    - Owner can edit each question
+[X] Add tag to question migrations
+2. Created an index page
+    [X] Add all questions on the index page 
+    - Link them to the show page
+4. Each question as they own show page 
+
+## TASK LIST - Answers
+
+## TASK LIST - Bootstrap
