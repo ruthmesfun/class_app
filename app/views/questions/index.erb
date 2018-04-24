@@ -1,9 +1,10 @@
 
 <ul>
 <%@questions.each do |question|%>
-    <li><%=question.title%></li>
+    <a href = '/questions/<%=question.id%>'><li><%=question.title%></li>
     <%if !question.student.nil?%>
         <li><%=question.student.username%></li>
     <%end%>
+    </a>
 <%end%>
 </ul>

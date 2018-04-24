@@ -6,9 +6,16 @@
 
 <p>Number of Questions Asked:</p>
 <%= @student.num_of_questions%>
-
+<p> List of questions </p>
+<ol>
+<%@student.questions.each do |question|%>
+   <li> <%=question.title%> <%=question.created_at%></li>
+<%end%>
+<ol>
 <p>Number of Questions Answered:</p>
 <%= @student.num_of_answers%>
 <%#need to add the number of questions asked, the number of answeres, and the list of questions and numbers%>
+
+<a href= '/profile/edit'><h3>[EDIT PROFILE]</h3></a>
 
 <a href= '/logout'><h3>[LOGOUT]</h3></a>
