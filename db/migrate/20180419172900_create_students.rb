@@ -14,3 +14,4 @@ end
 
 #add phone number verification https://www.twilio.com/docs/sms/tutorials/two-factor-authentication-ruby-sinatra
 
+#https://developer.github.com/apps/building-github-apps/identifying-and-authorizing-users-for-github-apps/#identifying-users-on-your-site

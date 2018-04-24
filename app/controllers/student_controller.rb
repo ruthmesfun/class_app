@@ -57,7 +57,7 @@ class StudentController < ApplicationController
     patch '/profile' do
         @student = current_user
         @student.update(first_name: params[:first_name], image: params[:image], github: params[:github])
-
+        
         @student.save 
 
         erb :'students/profile'

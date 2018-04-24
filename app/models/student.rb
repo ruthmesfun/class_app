@@ -1,7 +1,9 @@
 class Student < ActiveRecord::Base
     has_many :answers
     has_many :questions
+    
     has_secure_password
+
     validates :username, presence: true
     validates :username, uniqueness: true
     validates :password, presence: true
