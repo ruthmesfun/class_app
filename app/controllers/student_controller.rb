@@ -57,7 +57,7 @@ class StudentController < ApplicationController
     patch '/profile' do
         @student = current_user
         @student.update(first_name: params[:first_name], image: params[:image], github: params[:github])
-        
+
         @student.save 
 
         erb :'students/profile'
@@ -69,6 +69,21 @@ class StudentController < ApplicationController
         erb :"students/edit"
     end
 
+    get '/students/:id/delete' do
+        @student = Student.find(params[:id])
+        if logged_in? && current_user
+            erb :'students/delete'
+        else 
+            redirect "/students/#{@student.id}"
+        end
+    end
 
+    delete '/students/:id/delete' do
+        @student = Student.find(params[:id])
+        @student.delete
+        
+        redirect '/'
+
+    end
 
 end
