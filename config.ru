@@ -1,6 +1,9 @@
 require './config/environment'
 use Rack::MethodOverride
-use AnswerController
+
+
+use CommentController
 use QuestionController
 use StudentController
+
 run ApplicationController

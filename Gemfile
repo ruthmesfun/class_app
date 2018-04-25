@@ -12,6 +12,11 @@ gem 'pry'
 gem 'bcrypt'
 gem "tux"
 gem "activemodel", require: "active_model"
+gem 'haml'
+
+# Sass & Compass
+gem 'sass'
+gem 'compass'
 
 group :test do
   gem 'rspec'

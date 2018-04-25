@@ -12,3 +12,4 @@ class CreateQuestions < ActiveRecord::Migration[5.2]
   end
 end
 
+#I might add a voting tag

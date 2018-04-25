@@ -10,19 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_22_201641) do
+ActiveRecord::Schema.define(version: 2018_04_25_150539) do
 
-  create_table "answers", force: :cascade do |t|
+  create_table "comments", force: :cascade do |t|
     t.integer "student_id"
     t.integer "question_id"
-    t.string "title"
     t.text "content"
     t.integer "vote"
-    t.datetime "published_at"
-    t.datetime "updated_at", null: false
     t.datetime "created_at", null: false
-    t.index ["question_id"], name: "index_answers_on_question_id"
-    t.index ["student_id"], name: "index_answers_on_student_id"
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_comments_on_question_id"
+    t.index ["student_id"], name: "index_comments_on_student_id"
   end
 
   create_table "questions", force: :cascade do |t|
