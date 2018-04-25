@@ -9,7 +9,7 @@
 <p> List of questions </p>
 <ol>
 <%@student.questions.each do |question|%>
-   <li> <%=question.title%> <%=question.created_at%></li>
+  <a href = "/questions/<%=question.id%>"> <li> <%=question.title%> <%=question.created_at%></li></a>
 <%end%>
 <ol>
 <p>Number of Questions Answered:</p>
@@ -19,3 +19,5 @@
 <a href= '/profile/edit'><h3>[EDIT PROFILE]</h3></a>
 
 <a href= '/logout'><h3>[LOGOUT]</h3></a>
+
+<a href= '/students/<%=@student.id%>/delete'><h3>[DELETE PROFILE]</h3></a>

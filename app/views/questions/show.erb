@@ -9,3 +9,6 @@
 <%= @question.student_username%>
 <br>
 <%= @question.created_at%>
+
+<a href= '/questions/<%=@question.id%>/edit'><h3>[EDIT]</h3></a>
+<a href= '/questions/<%=@question.id%>/delete'><h3>[DELETE]</h3></a>
