@@ -1,0 +1,10 @@
+<%=@comment.content%>
+<form method="POST" action='/comments/<%=@comment.id%>'>
+    <input id="hidden" type="hidden" name="_method" value="patch">
+    <label>Content</label>
+    <input type= "textarea" name= "content">
+    <br>
+
+    <input type= "submit" value = "Submit">   
+</form>
+

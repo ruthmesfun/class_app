@@ -1,0 +1,23 @@
+<%= @question.title%>
+<br>
+<%= @question.lab%>
+<br>
+<%= @question.link%>
+<br>
+<%= @question.content%>
+<br>
+<%= @question.student_username%>
+<br>
+<%= @question.created_at%>
+
+<br>
+----
+<br>
+<form method="POST" action="/comments">
+    <label>Content</label>
+    <input type= "textarea" name= "content">
+    <br>
+
+    <input type= "submit" value = "Submit">   
+</form>
+
