@@ -1,5 +1,5 @@
 class Student < ActiveRecord::Base
-    has_many :answers
+    has_many :comments
     has_many :questions
     
     has_secure_password
@@ -14,7 +14,7 @@ class Student < ActiveRecord::Base
     end
 
     def num_of_answers
-        answers.count
+        comments.count
     end
 end
 
