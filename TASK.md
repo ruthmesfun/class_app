@@ -29,18 +29,23 @@
     - list of a
 [X] Create a logout page
 [X] Create an edit page
+[X] Create a delete button
 
 ## TASK LIST - Question
 1. Create a question form 
     [X] Make sure the student is logged in
     [X] Validates all information is present
-    - Owner can edit each question
+    [X] Owner can edit each question
+    [X] Owner can delete this question
+    - When there is an error it shows it
 [X] Add tag to question migrations
-2. Created an index page
+[X] Created an index page
     [X] Add all questions on the index page 
     [X] Link them to the show page
 4. Each question as they own show page 
-    - show page has title, content, creator, and created date
+    [X] show page has title, content, creator, and created date
+    [X] Edit question page
+    [X] Delete Question page
 
 ## TASK LIST - Answers
 

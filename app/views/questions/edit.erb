@@ -1,0 +1,17 @@
+<form method="POST" action="/questions/<%=@question.id%>">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+    <label>Title</label>
+    <input type= "text" name= "title" value = "<%=@question.title%>">
+    <br>
+    <label>Lab Name</label>
+    <input type= "text" name= "lab" value = "<%=@question.lab%>">
+    <br>
+    <label>Link</label>
+    <input type= "text" name= "link" value = "<%=@question.lab%>">
+    <br>
+    <label>Content</label>
+    <input type= "textarea" name= "content" value = "<%=@question.lab%>">
+    <br>
+
+    <input type= "submit" value = "Submit">   
+</form>
