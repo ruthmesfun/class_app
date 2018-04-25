@@ -1,0 +1,22 @@
+Are you sure you want to delete this? 
+<h1>Welcome, <%=@student.first_name%>!</h1>
+<br>
+<img src='<%=@student.image%>'>
+<br>
+<a href = "<%=@student.github%>"><p>Github link</p> </a>
+
+<p>Number of Questions Asked:</p>
+<%= @student.num_of_questions%>
+<p> List of questions </p>
+<ol>
+<%@student.questions.each do |question|%>
+  <a href = "/questions/<%=question.id%>"> <li> <%=question.title%> <%=question.created_at%></li></a>
+<%end%>
+<ol>
+<p>Number of Questions Answered:</p>
+<%= @student.num_of_answers%>
+
+<form method="post" action="/students/<%= @student.id %>/delete">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete">
+</form>
