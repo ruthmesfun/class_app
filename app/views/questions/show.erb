@@ -10,5 +10,17 @@
 <br>
 <%= @question.created_at%>
 
+<%@question.comments.each do |comment|%>
+    <ul>
+        <li> <%=comment.content %>
+            <br>
+            <%=comment.student_username%>
+            <br>
+            <%=comment.created_at%>
+            <br>
+        </li>
+    </ul>
+<%end%>
 <a href= '/questions/<%=@question.id%>/edit'><h3>[EDIT]</h3></a>
 <a href= '/questions/<%=@question.id%>/delete'><h3>[DELETE]</h3></a>
+<a href= '/comments/new'><h3>[ANSWER]</h3></a>

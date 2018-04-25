@@ -11,10 +11,22 @@
 <%@student.questions.each do |question|%>
   <a href = "/questions/<%=question.id%>"> <li> <%=question.title%> <%=question.created_at%></li></a>
 <%end%>
-<ol>
+</ol>
+<a href= '/questions/new'><h3>[ASK QUESTIONS]</h3></a>
+
+<br>
 <p>Number of Questions Answered:</p>
 <%= @student.num_of_answers%>
+<br>
+<p> List of questions you have answered </p>
+<ol>
+<%@student.comments.each do |comment| %>
+    <li><%=comment.question_title%></li>
+<%end%>
+</ol>
 <%#need to add the number of questions asked, the number of answeres, and the list of questions and numbers%>
+
+<a href= '/questions'><h3>[ANSWER MORE QUESTIONS]</h3></a>
 
 <a href= '/profile/edit'><h3>[EDIT PROFILE]</h3></a>
 
