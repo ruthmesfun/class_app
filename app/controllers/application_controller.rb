@@ -1,5 +1,4 @@
 class ApplicationController < Sinatra::Base
-
   configure do
   	set :views, "app/views"
     set :public_dir, "public"
@@ -11,6 +10,10 @@ class ApplicationController < Sinatra::Base
   	erb :index
   end
 
+  get '/test' do 
+    erb :test
+  end
+
   helpers do
     def logged_in?
       !!session[:student_id]
@@ -18,6 +21,10 @@ class ApplicationController < Sinatra::Base
 
     def current_user
       Student.find(session[:student_id])
+    end
+
+    def current_question
+      Question.find(session[:question_id])
     end
   end
 end

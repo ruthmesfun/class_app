@@ -20,6 +20,7 @@ class QuestionController < ApplicationController
     get '/questions/:id' do 
         @question = Question.find(params[:id])
         if logged_in?
+            session[:question_id] = @question.id
             erb :'questions/show'
         else
             redirect '/login'
