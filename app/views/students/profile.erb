@@ -1,35 +1,142 @@
-<h1>Welcome, <%=@student.first_name%>!</h1>
-<br>
-<img src='<%=@student.image%>'>
-<br>
-<a href = "<%=@student.github%>"><p>Github link</p> </a>
+ <head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
 
-<p>Number of Questions Asked:</p>
-<%= @student.num_of_questions%>
-<p> List of questions </p>
-<ol>
+<script id="__webpack_config__" data-asset-url="https://cdn.greenhouse.io/assets/webpack/" data-git-sha="5e7930f18f981a80baf27adce5e9f247085d28a1" type="text/configuration"></script><script src="https://cdn.greenhouse.io/assets/webpack/vendor-6da41c245969b300ff69.js"></script><script src="https://cdn.greenhouse.io/assets/webpack/commons-c43a16dcacfa2b6f5821.js"></script><link rel="stylesheet" media="screen" href="https://cdn.greenhouse.io/assets/webpack/commons-12fe963b57640e59bdbd364aad4353e2.css">
+<script src="https://cdn.greenhouse.io/assets/webpack/legacy_tracking-b4c8bc207e3c22af880b.js"></script>
+
+  <link rel="stylesheet" media="all" href="https://cdn.greenhouse.io/assets/application-0a7646f6d4bc2cf71a9a066816b9c97f85c265ffa29f5cfad5c6e5364fd7dea2.css">
+
+<title>Profile Settings | LearnOverflow</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
+
+<meta data-name="native-mobile-agent" data-content="">
+
+
+
+<!-- Allows mobile browsers to show a 'smart banner' to prompt install of android app -->
+<link rel="manifest" href="/mobile/banner/android_manifest.json">
+
+  <link rel="stylesheet" media="screen" href="https://cdn.greenhouse.io/assets/my_info-cbbd8f6ae22739c5ce9a6c608847278387eef1fcc358eb056b0dfe1604dd4756.css">
+  <link rel="stylesheet" media="screen" href="https://cdn.greenhouse.io/assets/notifications-9739dabb82ad0a1327fe0dce80ea382e7e207a3aa37994f56b37fb309d7ebf42.css">
+<style type="text/css" data-styled-components="bWnOgv eXElyr hLSqiV eIcndV fnRuNt bTQcth" data-styled-components-is-local="true"></style><style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style></head>
+
+  </div>
+<div class="cfp-hotkeys-container fade ng-scope" ng-class="{in: helpVisible}" style="display: none;"><div class="cfp-hotkeys"><!-- ngIf: !header --><h4 class="cfp-hotkeys-title ng-binding ng-scope" ng-if="!header">Keyboard Shortcuts:</h4><!-- end ngIf: !header --><!-- ngIf: header --><table><tbody><!-- ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } --><tr ng-repeat="hotkey in hotkeys | filter:{ description: '!$$undefined$$' }" class="ng-scope"><td class="cfp-hotkeys-keys"><!-- ngRepeat: key in hotkey.format() track by $index --><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key ng-binding ng-scope">?</span><!-- end ngRepeat: key in hotkey.format() track by $index --></td><td class="cfp-hotkeys-text ng-binding">Show / hide this help menu</td></tr><!-- end ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } --><tr ng-repeat="hotkey in hotkeys | filter:{ description: '!$$undefined$$' }" class="ng-scope"><td class="cfp-hotkeys-keys"><!-- ngRepeat: key in hotkey.format() track by $index --><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key ng-binding ng-scope">/</span><!-- end ngRepeat: key in hotkey.format() track by $index --></td><td class="cfp-hotkeys-text ng-binding">Focus the search bar</td></tr><!-- end ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } --></tbody></table><!-- ngIf: footer --><div class="cfp-hotkeys-close" ng-click="toggleCheatSheet()">×</div></div></div></div>
+
+  <div id="subheader">
+    <div class="container">
+        Learn/Overflow
+    </div>
+  </div>
+  
+<div id="horiz_nav"     style=" border-bottom: 2px solid #00b3e6"> 
+  <div class="container"> 
+      
+<ul class="nav" >
+  <li class="selected" style="background-color: #00b3e6"><a href="http://learn.co">Learn</a></li>
+  <li class="selected" style="background-color: #00b3e6"><a href="/questions">Questions</a></li>
+  <li class="selected"><a href="/comments" style="background-color: #00b3e6">Comments</a></li>
+  <li class="selected"><a href="/profile" style="background-color: #00b3e6">Profile</a></li>
+
+  
+</ul>
+
+  </div>
+</div>
+
+  <div id="wrapper" class="responsive-wrapper">
+    
+
+<div id="my_info">
+  <script src="https://cdn.greenhouse.io/assets/webpack/myinfo-ea17b084d347f940ba2a.js"></script>
+
+    
+  <div class="account-settings-navigation">
+  </div>
+
+
+  <div class="my-info-main">
+      <div class="content-box content-box-alt">
+        <div class="header">
+          <h4> Questions Asked</h4>
+        </div>
+        <div class="content">
+  <div class="notification-preference-listing">
+  <ol>
 <%@student.questions.each do |question|%>
-  <a href = "/questions/<%=question.id%>"> <li> <%=question.title%> <%=question.created_at%></li></a>
+  <div class="container-separator slack">
+<a href = "/questions/<%=question.id%>"> <li> <%=question.title%> ---- <%=question.created_at%></li></a>
+</div>
 <%end%>
 </ol>
-<a href= '/questions/new'><h3>[ASK QUESTIONS]</h3></a>
 
-<br>
-<p>Number of Questions Answered:</p>
-<%= @student.num_of_answers%>
-<br>
-<p> List of questions you have answered </p>
-<ol>
-<%@student.comments.each do |comment| %>
-    <li><%=comment.question_title%></li>
-<%end%>
-</ol>
-<%#need to add the number of questions asked, the number of answeres, and the list of questions and numbers%>
+</div>
+</div>
+</div>
+</div>
 
-<a href= '/questions'><h3>[ANSWER MORE QUESTIONS]</h3></a>
+  <div class="my-info-support">
+    <div class="content-box content-box-alt">
+      <div class="header">
+        <h4>
+          Personal Information
+          <a class="content-header-link" href="/profile/edit">Edit</a>
+        </h4>
+      </div>
+      <div class="content">
+        <div class="content-block-row">
+          Welcome, <%=@student.first_name%>!
+        </div>
 
-<a href= '/profile/edit'><h3>[EDIT PROFILE]</h3></a>
 
-<a href= '/logout'><h3>[LOGOUT]</h3></a>
+        <div class="content-block-row">
+          <img src='<%=@student.image%>'>
+        </div>
+          <div class="content-block-row">
+            <a id="my_link" href="<%=@student.github%>">Github Profile</a>
+          </div>
+          
+          <div class="content-block-row">
+          <a href= '/questions/new'><%= @student.num_of_questions%> Questions Asked </p></a>
+          </div>
+          <div class="content-block-row">
+            <a href= '/questions'><%= @student.num_of_answers%> Questions Answered</a>
+            </div>
+      </div>
+    </div>
 
-<a href= '/students/<%=@student.id%>/delete'><h3>[DELETE PROFILE]</h3></a>
+    <div class="content-box content-box-alt">
+      <div class="header">
+        <h4>Setting Options</h4>
+      </div>
+      <div class="content">
+        <table id="social_media" class="content-box-table">
+          <tbody>
+              <tr>
+  <td>
+      <a href='/students/<%=@student.id%>/delete'> Delete Profile</a>
+  </td>
+</tr>
+<tr>
+  <td>
+      <a href="/students/<%=@student.id%>/edit">Edit Profile</a>
+  </td>
+</tr>
+<tr>
+  <td>
+      <a href="/logout">Logout</a>
+  </td>
+</tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+  </div>
+
+
+

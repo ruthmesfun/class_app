@@ -11,6 +11,7 @@ class QuestionController < ApplicationController
     get '/questions' do
         if logged_in?
             @questions = Question.all
+            @student = current_user
             erb :"questions/index"
         else
             redirect '/login'
@@ -21,6 +22,7 @@ class QuestionController < ApplicationController
         @question = Question.find(params[:id])
         if logged_in?
             session[:question_id] = @question.id
+            @current_user = current_user
             erb :'questions/show'
         else
             redirect '/login'
@@ -55,6 +57,7 @@ class QuestionController < ApplicationController
         @question.update(title: params[:title], content: params[:content], link: params[:link], lab: params[:lab])
 
         @question.save
+        @current_user = current_user
 
         redirect "/questions/#{@question.id}"
     end

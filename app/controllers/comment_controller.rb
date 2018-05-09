@@ -36,7 +36,7 @@ class CommentController < ApplicationController
             @comment.student  = current_user
             @comment.question = current_question
             @comment.save
-            redirect "/comments/#{@comment.id}"
+            redirect "/questions/#{@comment.question.id}"
         else
             redirect '/comments/new'
         end
@@ -47,7 +47,7 @@ class CommentController < ApplicationController
         if logged_in? && @comment.student == current_user
             erb :'comments/edit'
         else
-            redirect "/comments/#{@comment.id}"
+            redirect "/questions/#{@comment.question.id}"
         end
     end
 
@@ -58,7 +58,7 @@ class CommentController < ApplicationController
 
         @comment.save
 
-        redirect "/comments/#{@comment.id}"
+        redirect "/questions/#{@comment.question.id}"
     end
 
     get '/comments/:id/delete' do
@@ -66,7 +66,7 @@ class CommentController < ApplicationController
         if logged_in? && @comment.student == current_user
             erb :'comments/delete'
         else 
-            redirect "/comments/#{@comment.id}"
+            redirect "/questions/#{@comment.question.id}"
         end
     end
 
@@ -74,7 +74,7 @@ class CommentController < ApplicationController
         @comment = Comment.find(params[:id])
         @comment.delete
         
-        redirect '/comments'
+        redirect "/questions/#{@comment.question.id}"
 
     end
 end

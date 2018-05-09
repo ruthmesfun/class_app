@@ -1,3 +1,5 @@
+#DEBUG
+--> Sign up is not working --> It is not passing through new students
 # TASK LIST FOR SINATRA PORTFOLIO PROJECT
 [X] Build an MVC Sinatra Application.
 [X] Use ActiveRecord with Sinatra.

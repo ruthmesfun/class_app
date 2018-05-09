@@ -5,11 +5,8 @@ class CreateQuestions < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :content
       t.string :link 
-      t.datetime :published_at
-      t.datetime :updated_at
+      
       t.timestamps
     end
   end
 end
-
-#I might add a voting tag

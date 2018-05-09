@@ -1,42 +1,43 @@
 class StudentController < ApplicationController
-
+    
     get '/login' do
         if logged_in?
-            redirect '/profile'
+            redirect '/questions'
         else
-            erb :'students/login'
+            erb :'students/login', :locals => {:client_id => CLIENT_ID}
         end
     end
 
-    post '/login' do
-        @student = Student.find_by(username: params[:username])
-        if @student && @student.authenticate(params[:password])
-            session.clear
-            session[:student_id] = @student.id 
-            redirect "/profile"
-        else 
-            redirect '/login'
-        end
-    end
+    # post '/login' do
+    #     @student = Student.find_by(username: params[:username])
+    #     if @student
+    #         session.clear
+    #         session[:student_id] = @student.id 
+    #         redirect "/questions"
+    #     else 
+    #         redirect '/login'
+    #     end
+    # end
 
     get '/signup' do
         if logged_in?
-            redirect '/profile'
+            redirect '/questions'
         else
-            erb :'students/signup'
+            erb :'students/signup', :locals => {:client_id => CLIENT_ID}
         end
     end
 
-    post '/signup' do 
-        @student = Student.create(first_name: params[:first_name], username: params[:username], password: params[:password], image: params[:image], github: params[:github])
-        if @student.valid?
-            session.clear
-            session[:student_id] = @student.id
-            redirect to "/profile"
-        else
-            redirect "/signup"
-        end
-    end
+    # post '/signup' do 
+    #     @student = Student.create(first_name: params[:first_name], username: params[:username], password: params[:password], image: params[:image], github: params[:github])
+
+    #     if @student.valid?
+    #         session.clear
+    #         session[:student_id] = @student.id
+    #         redirect to "/questions"
+    #     else
+    #         redirect "/signup"
+    #     end
+    # end
 
     get '/logout' do
         if logged_in?
@@ -48,10 +49,16 @@ class StudentController < ApplicationController
     end
 
     get "/profile" do #can't get it to customize url
-        @student = current_user
-        # binding.pry
-
-        erb :'students/profile'
+        #  binding.pry
+        # raise session.inspect
+        if logged_in?
+            
+             @student = current_user
+             erb :'students/profile'
+        else
+            redirect '/'
+        end
+        
     end
 
     patch '/profile' do
@@ -64,9 +71,12 @@ class StudentController < ApplicationController
     end
 
     get '/profile/edit' do #This edit route is not working
-        @student = current_user
-
-        erb :"students/edit"
+        if logged_in?
+            @student = current_user
+            erb :"students/edit"
+        else 
+            redirect '/'
+        end
     end
 
     get '/students/:id/delete' do

@@ -1,59 +1,240 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Signin Template for Bootstrap</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
 
-    <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
-    <link href="navbar-top-fixed.css" rel="stylesheet">
-  </head>
+<script id="__webpack_config__" data-asset-url="https://cdn.greenhouse.io/assets/webpack/" data-git-sha="5e7930f18f981a80baf27adce5e9f247085d28a1" type="text/configuration"></script><script src="https://cdn.greenhouse.io/assets/webpack/vendor-6da41c245969b300ff69.js"></script><script src="https://cdn.greenhouse.io/assets/webpack/commons-c43a16dcacfa2b6f5821.js"></script><link rel="stylesheet" media="screen" href="https://cdn.greenhouse.io/assets/webpack/commons-12fe963b57640e59bdbd364aad4353e2.css">
+<script src="https://cdn.greenhouse.io/assets/webpack/legacy_tracking-b4c8bc207e3c22af880b.js"></script>
 
-  <body class="text-center">
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Fixed navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-    <main role="main" class="container">
-    <div class = "form-signin">
-    <form >
-      <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-    </form>
+  <link rel="stylesheet" media="all" href="https://cdn.greenhouse.io/assets/application-0a7646f6d4bc2cf71a9a066816b9c97f85c265ffa29f5cfad5c6e5364fd7dea2.css">
+
+<title>Profile Settings | LearnOverflow</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
+
+<meta data-name="native-mobile-agent" data-content="">
+
+
+
+<!-- Allows mobile browsers to show a 'smart banner' to prompt install of android app -->
+<link rel="manifest" href="/mobile/banner/android_manifest.json">
+
+  <link rel="stylesheet" media="screen" href="https://cdn.greenhouse.io/assets/my_info-cbbd8f6ae22739c5ce9a6c608847278387eef1fcc358eb056b0dfe1604dd4756.css">
+  <link rel="stylesheet" media="screen" href="https://cdn.greenhouse.io/assets/notifications-9739dabb82ad0a1327fe0dce80ea382e7e207a3aa37994f56b37fb309d7ebf42.css">
+<style type="text/css" data-styled-components="bWnOgv eXElyr hLSqiV eIcndV fnRuNt bTQcth" data-styled-components-is-local="true"></style><style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style></head>
+
+  </div>
+<div class="cfp-hotkeys-container fade ng-scope" ng-class="{in: helpVisible}" style="display: none;"><div class="cfp-hotkeys"><!-- ngIf: !header --><h4 class="cfp-hotkeys-title ng-binding ng-scope" ng-if="!header">Keyboard Shortcuts:</h4><!-- end ngIf: !header --><!-- ngIf: header --><table><tbody><!-- ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } --><tr ng-repeat="hotkey in hotkeys | filter:{ description: '!$$undefined$$' }" class="ng-scope"><td class="cfp-hotkeys-keys"><!-- ngRepeat: key in hotkey.format() track by $index --><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key ng-binding ng-scope">?</span><!-- end ngRepeat: key in hotkey.format() track by $index --></td><td class="cfp-hotkeys-text ng-binding">Show / hide this help menu</td></tr><!-- end ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } --><tr ng-repeat="hotkey in hotkeys | filter:{ description: '!$$undefined$$' }" class="ng-scope"><td class="cfp-hotkeys-keys"><!-- ngRepeat: key in hotkey.format() track by $index --><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key ng-binding ng-scope">/</span><!-- end ngRepeat: key in hotkey.format() track by $index --></td><td class="cfp-hotkeys-text ng-binding">Focus the search bar</td></tr><!-- end ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } --></tbody></table><!-- ngIf: footer --><div class="cfp-hotkeys-close" ng-click="toggleCheatSheet()">×</div></div></div></div>
+
+  <div id="subheader">
+    <div class="container">
+        Learn/Overflow
     </div>
-    </main>
+  </div>
+  
+<div id="horiz_nav"     style=" border-bottom: 2px solid #00b3e6"> 
+  <div class="container"> 
+      
+<ul class="nav" >
+  <li class="selected" style="background-color: #00b3e6"><a href="http://learn.co">Learn</a></li>
+  <li class="selected" style="background-color: #00b3e6"><a href="/questions">Questions</a></li>
+  <li class="selected"><a href="/comments" style="background-color: #00b3e6">Comments</a></li>
+  <li class="selected"><a href="/profile" style="background-color: #00b3e6">Profile</a></li>
+
+  
+</ul>
+
+  </div>
+</div>
+
+  <div id="wrapper" class="responsive-wrapper">
     
-  </body>
-</html>
+
+<div id="my_info">
+  <script src="https://cdn.greenhouse.io/assets/webpack/myinfo-ea17b084d347f940ba2a.js"></script>
+
+    
+<div class="account-settings-navigation">
+</div>
+
+
+  <div class="my-info-main">
+      <div class="content-box content-box-alt">
+        <div class="header">
+          <h4>Notification Preferences</h4>
+        </div>
+        <div class="content">
+          <div class="email">
+
+  <div class="wrapper-header">
+    You are receiving email notifications on <span class="hiring-plans-notification-count">
+    1 job</span>
+      <a modal_path="/users/618156/notifications?delivery_type=email" class="cancel edit-user-notifications" href="#">(Edit)</a>
+
+      and <span class="following-notification-count">0 candidates</span>
+      <a modal_path="/users/618156/edit_followers" class="cancel edit-follower-notifications" href="#">(Edit)</a>
+  </div>
+  <div class="notification-preference-listing">
+
+    <form action="/myinfo/interviews_reminder_notification_preference" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="LAYxJh3jB87Pva+W1sWlRmEjZpmb0glgVwO8zD3na2tJevS93V23noPskpYlBlPYYnxi1XTdEoRYiaBTP3KC9A==">
+      <div class="content-block-wrapper">
+        <div class="toggle-container">
+          <input type="checkbox" name="opted_in" id="opt_in_interview_reminder_email" value="1" class="email-preference-checkbox" hidden="hidden" checked="checked">
+          <div data-react-class="ControlledToggle" data-react-props="{&quot;enabled&quot;:true,&quot;formControl&quot;:&quot;#opt_in_interview_reminder_email&quot;}"><div data-reactroot="" class="Toggle__ToggleWrapper-hNmeZr eXElyr" data-toggle="true"><span class="Toggle__ToggleChoice-gQoiUU hLSqiV">On</span><span class="Toggle__ToggleChoice-gQoiUU eIcndV">Off</span><div class="Toggle__ToggleThumb-dgUjbt fnRuNt"></div><input type="checkbox" class="Toggle__ToggleInput-dsdOTa bTQcth" value="on" readonly=""></div></div>
+        </div>
+        <div class="toggle-content">
+          <div class="wrapper-header">
+            Daily interview reminder email
+          </div>
+          <div class="wrapper-body">
+            This email contains a list of interviews I must attend today.
+          </div>
+        </div>
+      </div>
+</form>
+  </div>
+</div>
+
+<div class="container-separator slack">
+      <div class="integration register wrapper-header"> Want to get your notifications via Slack too?</div>
+      <div class="action">
+        <a rel="nofollow" data-method="post" href="/integrations/oauth/slack/activate"><img srcset="https://cdn.greenhouse.io/assets/add_to_slack-3d7db87b94fda101eee922535ba66a63fee1c8d271f9bc95f71bd90c90ad4682.png 1x, https://cdn.greenhouse.io/assets/add_to_slack2x-b1ad155fe8bdf9b058df3abf89b2285c76d14dc03328a44f20578059af3dd050.png 2x" alt="Add to Slack" height="40" width="139" src="https://cdn.greenhouse.io/assets/add_to_slack-3d7db87b94fda101eee922535ba66a63fee1c8d271f9bc95f71bd90c90ad4682.png"></a>
+      </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="content-block-wrapper">
+        <div data-react-class="EmailPermissionBlock" data-react-props="{&quot;allowedSenders&quot;:[],&quot;communalEmail&quot;:false,&quot;allUsers&quot;:[{&quot;id&quot;:2749,&quot;name&quot;:&quot;Rebekah Rombom&quot;},{&quot;id&quot;:10100,&quot;name&quot;:&quot;Adam Enbar&quot;},{&quot;id&quot;:10101,&quot;name&quot;:&quot;Kristi Riordan&quot;},{&quot;id&quot;:10102,&quot;name&quot;:&quot;Avi Flombaum&quot;},{&quot;id&quot;:10104,&quot;name&quot;:&quot;Joe Burgess&quot;},{&quot;id&quot;:17031,&quot;name&quot;:&quot;Adam Jonas&quot;},{&quot;id&quot;:45358,&quot;name&quot;:&quot;Steven Nunez&quot;},{&quot;id&quot;:55463,&quot;name&quot;:&quot;Lesley Bearg&quot;},{&quot;id&quot;:73915,&quot;name&quot;:&quot;Ian Candy&quot;},{&quot;id&quot;:79584,&quot;name&quot;:&quot;Amelia Tidona&quot;},{&quot;id&quot;:89460,&quot;name&quot;:&quot;Josh Rowley&quot;},{&quot;id&quot;:109984,&quot;name&quot;:&quot;Kaitlin Vignali&quot;},{&quot;id&quot;:141712,&quot;name&quot;:&quot;Kate Travers&quot;},{&quot;id&quot;:146407,&quot;name&quot;:&quot;Cricky Cicchetti&quot;},{&quot;id&quot;:153649,&quot;name&quot;:&quot;Amanda D'Avria&quot;},{&quot;id&quot;:160365,&quot;name&quot;:&quot;Annette Doskow&quot;},{&quot;id&quot;:192452,&quot;name&quot;:&quot;Nicole Kroese&quot;},{&quot;id&quot;:214987,&quot;name&quot;:&quot;Drew Price&quot;},{&quot;id&quot;:252518,&quot;name&quot;:&quot;Sarah Fox&quot;},{&quot;id&quot;:255539,&quot;name&quot;:&quot;Jeffrey Katz&quot;},{&quot;id&quot;:259044,&quot;name&quot;:&quot;May  Cheung&quot;},{&quot;id&quot;:274077,&quot;name&quot;:&quot;Peter Bell&quot;},{&quot;id&quot;:303343,&quot;name&quot;:&quot;Michael Krashes&quot;},{&quot;id&quot;:310254,&quot;name&quot;:&quot;Tony Guerrero&quot;},{&quot;id&quot;:442510,&quot;name&quot;:&quot;Gabriela Souffront&quot;},{&quot;id&quot;:481512,&quot;name&quot;:&quot;Cailee Adamson&quot;},{&quot;id&quot;:485735,&quot;name&quot;:&quot;Emily Doyle&quot;},{&quot;id&quot;:495743,&quot;name&quot;:&quot;Lisa Jiang&quot;},{&quot;id&quot;:561826,&quot;name&quot;:&quot;Tracy Lum&quot;},{&quot;id&quot;:638824,&quot;name&quot;:&quot;Brandon Collins&quot;},{&quot;id&quot;:653978,&quot;name&quot;:&quot;Gretchen Jacobi&quot;},{&quot;id&quot;:664278,&quot;name&quot;:&quot;Mollie Khine&quot;},{&quot;id&quot;:680202,&quot;name&quot;:&quot;Noam Mintz&quot;},{&quot;id&quot;:720473,&quot;name&quot;:&quot;globalmobility@wework.com&quot;},{&quot;id&quot;:724060,&quot;name&quot;:&quot;Meredith Robinson&quot;},{&quot;id&quot;:724235,&quot;name&quot;:&quot;Shea Shepard&quot;},{&quot;id&quot;:736473,&quot;name&quot;:&quot;David Jordan&quot;},{&quot;id&quot;:749018,&quot;name&quot;:&quot;Jessica Solimano&quot;},{&quot;id&quot;:764278,&quot;name&quot;:&quot;Paul Infield-Harm&quot;},{&quot;id&quot;:768826,&quot;name&quot;:&quot;Ricky Ahmed&quot;},{&quot;id&quot;:782837,&quot;name&quot;:&quot;Michael Kellman&quot;},{&quot;id&quot;:796308,&quot;name&quot;:&quot;Eric Molofsky&quot;},{&quot;id&quot;:796987,&quot;name&quot;:&quot;Nicholas Gallinelli&quot;},{&quot;id&quot;:807181,&quot;name&quot;:&quot;Erin Rowsey&quot;},{&quot;id&quot;:813045,&quot;name&quot;:&quot;Adam May&quot;}],&quot;path&quot;:&quot;/myinfo/allowed_email_senders&quot;}"><div data-reactroot="" class="content-box content-box-alt"><div class="header"><h4>Email Permissions</h4></div><div class="content"><div class="contact-preference"><div><label><input type="radio" hidden="" value="true" name="communalEmail"><div class="radio-button">&nbsp;</div></label><div class="contact-preference-option">Allow anyone with job or site admin permissions to send emails from my address</div></div><div><label><input type="radio" hidden="" value="false" name="communalEmail"><div class="radio-button radio--checked">&nbsp;</div></label><div class="contact-preference-option">Allow only specific people to send emails from my address</div></div></div><div class="email-permission-input-block"><div class="email-permission-input-field"><div class="select2-container" id="s2id_autogen1"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-2">Search users</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen2" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen2_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-2" id="s2id_autogen2_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-2">   </ul></div></div><select readonly="" tabindex="-1" title="" style="display: none;"><option></option><option value="2749">Rebekah Rombom</option><option value="10100">Adam Enbar</option><option value="10101">Kristi Riordan</option><option value="10102">Avi Flombaum</option><option value="10104">Joe Burgess</option><option value="17031">Adam Jonas</option><option value="45358">Steven Nunez</option><option value="55463">Lesley Bearg</option><option value="73915">Ian Candy</option><option value="79584">Amelia Tidona</option><option value="89460">Josh Rowley</option><option value="109984">Kaitlin Vignali</option><option value="141712">Kate Travers</option><option value="146407">Cricky Cicchetti</option><option value="153649">Amanda D'Avria</option><option value="160365">Annette Doskow</option><option value="192452">Nicole Kroese</option><option value="214987">Drew Price</option><option value="252518">Sarah Fox</option><option value="255539">Jeffrey Katz</option><option value="259044">May  Cheung</option><option value="274077">Peter Bell</option><option value="303343">Michael Krashes</option><option value="310254">Tony Guerrero</option><option value="442510">Gabriela Souffront</option><option value="481512">Cailee Adamson</option><option value="485735">Emily Doyle</option><option value="495743">Lisa Jiang</option><option value="561826">Tracy Lum</option><option value="638824">Brandon Collins</option><option value="653978">Gretchen Jacobi</option><option value="664278">Mollie Khine</option><option value="680202">Noam Mintz</option><option value="720473">globalmobility@wework.com</option><option value="724060">Meredith Robinson</option><option value="724235">Shea Shepard</option><option value="736473">David Jordan</option><option value="749018">Jessica Solimano</option><option value="764278">Paul Infield-Harm</option><option value="768826">Ricky Ahmed</option><option value="782837">Michael Kellman</option><option value="796308">Eric Molofsky</option><option value="796987">Nicholas Gallinelli</option><option value="807181">Erin Rowsey</option><option value="813045">Adam May</option></select></div><div></div></div></div></div></div>
+      </div>
+
+    <div id="email_settings_confirm_modal" class=" modal" data-modal-title="..."><div class="modal-body">
+  <div class="scrollable">
+    <div class="content"></div>
+    <div class="controls">
+      <a class="cancel" href="#">Cancel</a>
+      <button name="button" type="submit" class="large-button">Okay</button>
+    </div>
+  </div>
+</div></div>
+<script type="text/x-handlebars-template" charset="utf-8" id="email_settings_warnings">
+  <p>{{message}}</p>
+
+  <br/>
+  <ul class="square">
+    {{#each emailTemplates}}
+    <li>{{this}}</li>
+    {{/each}}
+  </ul>
+
+  <br/>
+</script>
+
+
+    <div class="content-box content-box-alt">
+  <div class="header">
+    <h4>Your Permissions</h4>
+  </div>
+  <div class="content">
+
+
+
+      <div class="container-separator">
+        <a name="job_specific_roles"></a>
+        <h4>Job Specific Roles</h4>
+          <div class="permissions-list">
+            <ul class="jobs-by-role-list">
+                <li class="closed">
+                  <div class="org-role-name"><p>Job Admin: Standard</p></div>
+                  <ul class="job-names" style="display: none;">
+                      <li class="job-name">
+                        Online Technical Coach Lead
+                      </li>
+                      <li class="job-name">
+                        Online Technical Coaching Fellow
+                      </li>
+                      <li class="job-name">
+                        Technical Coach
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </div>
+      </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="my-info-support">
+    <div class="content-box content-box-alt">
+      <div class="header">
+        <h4>
+          Personal Information
+          <a class="content-header-link" href="/myinfo/edit">Edit</a>
+        </h4>
+      </div>
+      <div class="content">
+        <div class="content-block-row">
+          Ruth Mesfun
+        </div>
+
+
+        <div class="content-block-row">
+          ruth@flatironschool.com
+        </div>
+
+          <div class="content-block-row">Pacific Time (US &amp; Canada)</div>
+
+          <div class="content-block-row">
+            <a modal_path="/sourcing/referrals/my_tracking_link_modal" id="my_link" href="#">My Referrer Link</a>
+          </div>
+      </div>
+    </div>
+
+    <div class="content-box content-box-alt">
+      <div class="header">
+        <h4>Social Networks</h4>
+      </div>
+      <div class="content">
+        <table id="social_media" class="content-box-table">
+          <tbody>
+              <tr>
+  <td>
+    <img class="social-logo-icon" src="https://cdn.greenhouse.io/assets/icons/twitter-59bda7ed08de78657647b59139cbf0bd61ab2b5a1d5737a8cfc9e4f463cd21b6.png" alt="Twitter">
+  </td>
+  <td>
+      <a rel="nofollow" data-method="post" href="/sourcing/activate_twitter">Connect to Twitter</a>
+  </td>
+</tr>
+
+              <tr>
+  <td>
+    <img class="social-logo-icon" src="https://cdn.greenhouse.io/assets/icons/facebook-45c191af2b224dc9ab0066f65f4d2b1de44421cc5b331ac19bfe951064f6cce2.png" alt="Facebook">
+  </td>
+  <td>
+      <a rel="nofollow" data-method="post" href="/sourcing/activate_facebook">Connect to Facebook</a>
+  </td>
+</tr>
+
+              <tr>
+  <td>
+    <img class="social-logo-icon" src="https://cdn.greenhouse.io/assets/icons/linkedin-6306fb56113a22fb1cac4952e4341f7b14ed031166aff39f424cfb72df8a495a.png" alt="Linkedin">
+  </td>
+  <td>
+      <a rel="nofollow" data-method="post" href="/sourcing/activate_linkedin">Connect to LinkedIn</a>
+  </td>
+</tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+  </div>
+
+
+

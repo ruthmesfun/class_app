@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_25_150539) do
+ActiveRecord::Schema.define(version: 2018_05_07_195814) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "student_id"
@@ -28,9 +28,8 @@ ActiveRecord::Schema.define(version: 2018_04_25_150539) do
     t.string "title"
     t.text "content"
     t.string "link"
-    t.datetime "published_at"
-    t.datetime "updated_at", null: false
     t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "lab"
     t.index ["student_id"], name: "index_questions_on_student_id"
   end
@@ -40,8 +39,8 @@ ActiveRecord::Schema.define(version: 2018_04_25_150539) do
     t.string "first_name"
     t.string "image"
     t.string "github"
-    t.datetime "created_at"
-    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
