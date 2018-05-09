@@ -1,6 +1,7 @@
+require 'dotenv/load'
 require './config/environment'
-use Rack::MethodOverride
 
+use Rack::MethodOverride
 
 use CommentController
 use QuestionController
