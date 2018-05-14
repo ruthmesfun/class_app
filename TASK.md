@@ -1,3 +1,15 @@
+# FINAL STRETCH 
+[] Need to create a ReadME
+[] ...includes a short description of the project.
+[] ...includes contributors guide for the project. 
+[] ...includes a license or link to the license for the project.
+
+[] Displays validation failures to user with an error message. 
+
+
+
+
+
 #DEBUG
 --> Sign up is not working --> It is not passing through new students
 # TASK LIST FOR SINATRA PORTFOLIO PROJECT
