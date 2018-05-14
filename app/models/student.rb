@@ -4,7 +4,6 @@ class Student < ActiveRecord::Base
     
     validates :username, presence: true
     validates :username, uniqueness: true
-    validates :first_name, presence: true
 
     def num_of_questions
         questions.count
