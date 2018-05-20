@@ -1,4 +1,9 @@
+require 'rack-flash'
+
 class QuestionController < ApplicationController
+
+    use Rack::Flash 
+
     get '/questions/new' do
         if logged_in?
             @student = current_user
@@ -35,9 +40,13 @@ class QuestionController < ApplicationController
         if @question.valid? 
             @question.student  = current_user
             @question.save
+            
+            flash[:message] = "You successfully created a question!"
+
             session[:question_id] = @question.id
             redirect "/questions/#{@question.id}"
         else
+            flash[:error] = "You need to add content!"
             redirect '/questions/new'
         end
     end

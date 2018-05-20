@@ -86,6 +86,9 @@
 </div>
 
 <div id="wrapper" style="margin-top: 100;">
+<% if flash.has?(:error) %>
+  <%= flash[:error] %>
+<% end %>
 
 <div class="job-setup-container">
   <div class="content-box content-box-alt">

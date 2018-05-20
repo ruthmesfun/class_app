@@ -11,7 +11,7 @@
 <script src="https://cdn.greenhouse.io/assets/application-e523140f3d56ff1b198e169393aa24331be532795b5e9bb37ac4bdf1f979fd51.js"></script>
   <link rel="stylesheet" media="all" href="https://cdn.greenhouse.io/assets/application-7c5480bbbf32c338ec347de130749fe4fd104219c144fef3264507de0776737b.css">
 
-<title>Comments | Learn/OverFlow</title>
+<title>Question | Learn/OverFlow</title>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
 
   <script>
@@ -57,7 +57,9 @@
 </div>
 
   <div id="wrapper" style="margin-top: 100;">
-
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %>
 <div class="job-setup-container">
   <div class="content-box content-box-alt">
   <div class="header">

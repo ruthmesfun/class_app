@@ -13,6 +13,7 @@ gem 'bcrypt'
 gem  'dotenv'
 gem "tux"
 gem 'json'
+gem 'rack-flash3'
 gem 'rest-client'
 gem "activemodel", require: "active_model"
 
